@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import "style.css";
+
+            body {
+                padding: var(--gap);
+                height: 100vh;
+                display: grid;
+                grid-template-rows: 1fr max-content;
+                gap: var(--gap);
+            }
+
+            .live-transcription-list {
+                height: 100%;
+                max-height: 100%;
+                overflow-y: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="liveTranscription" class="live-transcription-list">
+            <div class="empty-state">No transcription yet...</div>
+        </ul>
+        <div id="action" class="btns">
+            <button id="stopBtn" class="btn-red hidden">Stop</button>
+            <button id="viewBtn" class="hidden">View Transcription</button>
+        </div>
+        <script src="ui-helper.js"></script>
+        <script src="sidepanel.js"></script>
+    </body>
+</html>

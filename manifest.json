@@ -1,0 +1,39 @@
+{
+    "name": "Pixll Transcribe",
+    "description": "Transcribe live audio from tabs using Chrome's built-in AI for Google Meet, Zoom, and other web apps",
+    "version": "0.1",
+    "icons": {
+        "128": "assets/logo-128.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_title": "Pixll Transcribe",
+        "default_popup": "popup.html"
+    },
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "microphone-permission.html"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabCapture",
+        "tabs",
+        "storage",
+        "activeTab",
+        "offscreen",
+        "sidePanel",
+        "downloads"
+    ],
+    "manifest_version": 3
+}
